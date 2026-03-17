@@ -154,6 +154,29 @@
   border-radius: 10px;
   text-align: center;
 }
+    <script>
+function showColors(tone) {
+    const recs = document.getElementById('color-recommendations');
     
-</html>
+    if (tone === 'light') {
+        recs.innerHTML = "✨ <b>Goated for Light Tone:</b> Emerald Green, Royal Blue, & Silver. <br> <small>Avoid: Pale yellows (it washes you out).</small>";
+    } else if (tone === 'medium') {
+        recs.innerHTML = "✨ <b>Goated for Medium/Wheatish:</b> Mustard, Olive Green, & Rust Orange. <br> <small>These earthy vibes are 10/10 for you.</small>";
+    } else if (tone === 'deep') {
+        recs.innerHTML = "✨ <b>Goated for Deep Tone:</b> Cobalt Blue, Magenta, & Bright White. <br> <small>High contrast colors make your skin pop!</small>";
+    }
+}
+    </script>
+    
+
+    if (tone === 'light') {
+        message = '⭐ Goated Colors: Bold Blue, Emerald Green, Pastel Pink, Silver. Avoid: Washed-out Yellows.';
+    } else if (tone === 'medium') {
+        message = '⭐ Goated Colors: Mustard Yellow, Olive Green, Rust Orange, Warm Earth Tones.';
+    } else if (tone === 'deep') {
+        message = '⭐ Goated Colors: Cobalt Blue, Neon, Bright White, Magenta.';
+    }
+
+    recs.innerText = message;
+}
 
