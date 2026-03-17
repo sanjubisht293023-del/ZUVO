@@ -82,7 +82,30 @@
 
     <div class="section-title">More Suggestions</div>
     <div class="suggestion-scroll">
-        <div class="suggest-item"></div>
+        <div class="suggest-item"></div><section class="skin-tone-section">
+  <h3>Find Your Vibe ✨</h3>
+  <p>Select your skin tone to see which colors will pop on you!</p>
+  
+  <div class="tone-container">
+    <div class="tone-card light" onclick="showColors('light')">
+      <div class="circle"></div>
+      <span>Fair</span>
+    </div>
+    <div class="tone-card medium" onclick="showColors('medium')">
+      <div class="circle"></div>
+      <span>Wheatish</span>
+    </div>
+    <div class="tone-card deep" onclick="showColors('deep')">
+      <div class="circle"></div>
+      <span>Deep</span>
+    </div>
+  </div>
+
+  <div id="color-recommendations" class="recommendations">
+    <p>Tap a tone to see recommendations!</p>
+  </div>
+        </section>
+        
         <div class="suggest-item"></div>
         <div class="suggest-item"></div>
         <div class="suggest-item"></div>
@@ -95,6 +118,42 @@
         }, 3000); // 3 seconds pop out
     </script>
 
-</body>
+</body>.tone-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.tone-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.tone-card:hover {
+  transform: scale(1.1);
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #eee;
+}
+
+/* Skin Tone Colors */
+.light .circle { background-color: #FDF5E6; }
+.medium .circle { background-color: #D2B48C; }
+.deep .circle { background-color: #8B4513; }
+
+.recommendations {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+}
+    
 </html>
 
