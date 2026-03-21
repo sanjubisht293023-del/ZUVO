@@ -1,14 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const splash = document.getElementById("splash-screen");
-    const main = document.getElementById("main-content");
+body { font-family: Arial; }
 
-    setTimeout(() => {
-        splash.classList.add("fade-out");
+#splash-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        setTimeout(() => {
-            splash.style.display = "none";
-            main.classList.remove("hidden");
-        }, 500);
-
-    }, 2000);
-});
+.hidden { display: none; }
